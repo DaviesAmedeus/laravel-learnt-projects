@@ -1,0 +1,39 @@
+<br>
+	<h1 style="color: #0a4b78;font-family: monospace;font-size: 50px;text-align: center;">koda services</h1>
+	<h2 style="color: #0a4b78;font-family:cursive;font-size: 30px;text-align: center;">Our focus</h2><br><br>
+	<table width="100%;" style="color: white;padding-left: 60px;">
+	<tr>
+	<td><br>learning practicals<br><br>
+		<img src="images"height="100px"width="100px"><br>
+		<br>-Booots retention with memory aids<br>-Summarize learning with newsletter<br>-Create a learner identify a personal page
+	</td>
+		<td><br>Web development<br><br>
+
+			<img src="images"height="100px"width="100px"><br>  
+			<br>-Online code editor<br>-Student information system<br>-Sorting visualizer<br>
+		</td>
+	<td><br>Mobile development<br><br>
+		<img src="images"height="100px"width="100px">
+		<br><br>
+		-Apps development<br>-Phone mantainance<br>-Software development
+	</td>
+		<td><br>Network adminidtration services<br><br>
+		<img src="images"height="100px"width="100px"><br><br>-Phisical connection<br>-Internet-wirewless<br>-Local area Networking
+	</td>
+	<td><br>Other ICT services<br><br>
+		<img src="images"height="100px"width="100px"><br><br>-Monitoring<br>-Reporting and mantainance<br>-Remote support<br>
+	</td>
+</tr>
+</table>
+<footer style="color:white;background-color: #50575e;"width="300px"align="center">@ 2023 team koda.koda<br>
+	<img src="images" height="20px"width="20px">
+	<img src="images" height="20px"width="20px">
+	<img src="images" height="20px"width="20px">
+	<img src="images" height="20px"width="20px"><br>
+	All rights reserved
+</footer>
+<br>
+
+
+</body>
+</html>

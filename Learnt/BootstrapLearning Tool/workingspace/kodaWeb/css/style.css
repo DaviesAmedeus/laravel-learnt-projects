@@ -1,0 +1,33 @@
+
+		body
+		{
+		/* background-color: black; */
+            /* color: white; */
+		}
+
+
+
+    .pageintro{
+        color: #0a4b78;
+        font-family: monospace;
+        font-size: 50px;
+       text-align: center;
+    }
+
+    .links {
+        list-style-type: none;
+    
+    }
+
+    li{
+        display: inline;
+        padding-left: 50px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+        color: red;
+      }
