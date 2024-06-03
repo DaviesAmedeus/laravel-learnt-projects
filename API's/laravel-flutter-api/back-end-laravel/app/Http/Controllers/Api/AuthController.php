@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 use Illuminate\Validation\ValidationException;
@@ -27,7 +28,15 @@ class AuthController extends Controller
             'password'=>Hash::make($request->password),
         ]);
      
-        $user = User::where('email', $request->email)->first();
+        // $user = User::where('email', $request->email)->first();
+
+        $defaultCategories = Category::whereNull('user_id')->get();
+        foreach($defaultCategories as $category){
+            Category::create(['name'=>$category, 'user_id'=> $user->id
+            
+        ]);
+            
+        }
      
        
      

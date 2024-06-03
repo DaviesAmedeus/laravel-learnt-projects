@@ -8,8 +8,9 @@ class CategoryEdit extends StatefulWidget {
 
 
   final Category category;
+  final Function categoryCallback;
 
-  const CategoryEdit(this.category,{Key? key}) : super(key : key);
+   CategoryEdit(this.category,this.categoryCallback ,{Key? key}) : super(key : key);
 
   @override
   State<CategoryEdit> createState() => _CategoryEditState();
@@ -18,7 +19,7 @@ class CategoryEdit extends StatefulWidget {
 class _CategoryEditState extends State<CategoryEdit> {
   final GlobalKey<FormState>_formKey = GlobalKey<FormState>();
   final categoryNameController = TextEditingController();
-  ApiService apiService = ApiService();
+  // ApiService apiService = ApiService();
 
   String errorMessage =  '';
 
@@ -81,12 +82,9 @@ class _CategoryEditState extends State<CategoryEdit> {
       return;
     }
 
-    apiService.updateCategory(widget.category.id, categoryNameController.text).
-    then((Category category) => Navigator.pop(context)).catchError((exception){
-      setState(() {
-        errorMessage = exception.toString();
-      });
-    });
+    widget.category.name = categoryNameController.text;
+   await  widget.categoryCallback(widget.category);
+    Navigator.pop(context);
 
 
   }
