@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Models\Student;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AuthController extends Controller
 {
@@ -11,17 +12,17 @@ class AuthController extends Controller
         
         $request->validate([
        
-            'email' => 'required|email',
+            'user_name' => 'required',
             'password' => 'required',
-            'device_name' => 'required',
+           
         ]);
      
-        $user = User::where('email', $request->email)->first();
+        $student = Student::where('student_id', $request->user_name)->first();
      
-        if (! $user || ! Hash::check($request->password, $user->password)) {
-            throw ValidationException::withMessages([
-                'email' => ['The provided credentials are incorrect.'],
-            ]);
+        if (! $student || $request->password != $student->password) {
+            return  'Credentials provided not correct';
         }
+
+        return $student;
     }
 }
